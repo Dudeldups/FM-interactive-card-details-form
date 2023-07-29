@@ -1,3 +1,3 @@
-export default function Card() {
-  return <div>Card</div>;
+export default function Card({ side }: { side: string }) {
+  return <img className="" src={`images/bg-card-${side}.png`} alt="" />;
 }

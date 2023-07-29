@@ -13,9 +13,6 @@ export default {
         "clr-primary-300": "#dedddf",
         "clr-error": "#ff5252",
       },
-      width: {
-        card: "min(76%,25rem)",
-      },
     },
   },
   plugins: [],
