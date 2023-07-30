@@ -1,6 +1,12 @@
 export default function Card({ side }: { side: string }) {
-  let className = {
-    container: `absolute w-[17.8125rem] h-[9.763rem] bg-[url('images/bg-card-${side}.png')] bg-no-repeat bg-cover pl-[1.2rem] pr-[1.3rem] py-[1.1rem] text-[0.5625rem] tracking-[0.08rem] rounded-lg`,
+  type ClassName = {
+    container: string;
+    img: string;
+  };
+
+  let className: ClassName = {
+    container: `absolute text-[0.5625rem] tracking-[0.08rem]`,
+    img: "w-[17.8125rem] h-[9.763rem]",
   };
 
   switch (side) {
@@ -15,10 +21,15 @@ export default function Card({ side }: { side: string }) {
 
   return (
     <div className={className.container}>
+      <img
+        className={className.img}
+        src={`images/bg-card-${side}.png`}
+        alt=""
+      />
       {side === "back" ? (
         <p className="absolute right-[2.31rem] top-[4.4rem]">000</p>
       ) : (
-        <>
+        <div className="absolute inset-0 pl-[1.2rem] pr-[1.3rem] py-[1.1rem]">
           <img
             className="w-[3.375rem] h-[1.875rem]"
             src="images/card-logo.svg"
@@ -31,7 +42,7 @@ export default function Card({ side }: { side: string }) {
             <p className="uppercase">Jane Appleseed</p>
             <p>00/00</p>
           </div>
-        </>
+        </div>
       )}
     </div>
   );
