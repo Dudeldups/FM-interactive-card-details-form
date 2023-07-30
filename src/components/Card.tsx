@@ -1,4 +1,8 @@
-export default function Card({ side }: { side: string }) {
+type CardProps = {
+  side: string;
+};
+
+export default function Card({ side }: CardProps) {
   type ClassName = {
     container: string;
     img: string;

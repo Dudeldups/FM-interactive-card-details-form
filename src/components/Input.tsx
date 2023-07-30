@@ -1,3 +1,4 @@
-export default function Input() {
+type InputProps = {};
+export default function Input({}: InputProps) {
   return <div>Input</div>;
 }

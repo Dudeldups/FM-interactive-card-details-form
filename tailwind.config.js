@@ -13,6 +13,10 @@ export default {
         "clr-primary-300": "#dedddf",
         "clr-error": "#ff5252",
       },
+      backgroundImage: {
+        mobile: "url('images/bg-main-mobile.png')",
+        desktop: "url('images/bg-main-desktop.png')",
+      },
     },
   },
   plugins: [],
