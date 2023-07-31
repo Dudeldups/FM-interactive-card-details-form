@@ -5,36 +5,30 @@ type FormProps = {
 
 export default function Form({ handleSubmit, handleChange }: FormProps) {
   return (
-    <div className="grid place-content-center mt-[5.7rem] text-clr-primary-700 uppercase bg-pink-200">
-      <form
-        className="grid max-w-[32rem] bg-blue-100"
-        action="#"
-        onSubmit={handleSubmit}>
+    <div className="grid place-content-center mt-[5.7rem] px-3 xs:px-6 text-clr-primary-700 uppercase">
+      <form className="grid bg-blue-100" action="#" onSubmit={handleSubmit}>
         <label htmlFor="name">Cardholder name</label>
         <input type="text" id="name" onChange={handleChange} />
         <label htmlFor="cardNum">Card number</label>
         <input type="text" id="cardNum" onChange={handleChange} />
-        <div className="flex gap-[0.7rem]">
-          <div className="grid">
-            <p aria-hidden="true" className="">
-              Exp. date (MM/YY)
-            </p>
-            <div className="flex gap-[0.7rem]">
-              <label className="sr-only" htmlFor="expiration-m">
-                Expiration month, two digits
-              </label>
-              <input type="text" id="expiration-m" onChange={handleChange} />
-              <label className="sr-only" htmlFor="expiration-y">
-                Expiration year, two digits
-              </label>
-              <input type="text" id="expiration-y" onChange={handleChange} />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="cvc">CVC</label>
-            <input type="text" id="cvc" onChange={handleChange} />
-          </div>
+
+        <label htmlFor="expiration-m">
+          <span aria-hidden="true">Exp. date (MM/YY)</span>
+          <span className="sr-only">Expiration month, two digits</span>
+        </label>
+
+        <label className="sr-only" htmlFor="expiration-y">
+          Expiration year, two digits
+        </label>
+
+        <div className="grid grid-cols-[1fr_1fr_2fr] gap-3">
+          <input type="text" id="expiration-m" onChange={handleChange} />
+          <input type="text" id="expiration-y" onChange={handleChange} />
+          <input type="text" id="cvc" onChange={handleChange} />
         </div>
+
+        <label htmlFor="cvc">CVC</label>
+
         <button type="submit">Confirm</button>
       </form>
     </div>
