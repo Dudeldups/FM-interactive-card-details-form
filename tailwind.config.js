@@ -15,6 +15,7 @@ export default {
       },
       screens: {
         xs: "375px",
+        sm: "450px",
       },
       backgroundImage: {
         mobile: "url('images/bg-main-mobile.png')",
