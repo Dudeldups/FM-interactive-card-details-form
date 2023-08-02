@@ -12,16 +12,22 @@ export default function Form({ handleSubmit, handleChange }: FormProps) {
         action="/"
         method="GET"
         onSubmit={handleSubmit}>
-        <label htmlFor="name">Cardholder name</label>
-        <input type="text" id="name" onChange={handleChange} />
+        <fieldset className="grid">
+          <label htmlFor="name">Cardholder name</label>
+          <input type="text" id="name" onChange={handleChange} />
+        </fieldset>
 
-        <label htmlFor="cardNum">Card number</label>
-        <input type="text" id="cardNum" onChange={handleChange} />
+        <fieldset className="grid">
+          <label htmlFor="cardNum">Card number</label>
+          <input type="text" id="cardNum" onChange={handleChange} />
+        </fieldset>
 
-        <div className="grid grid-cols-2">
-          <fieldset>
-            <legend aria-hidden="true">Exp. date (MM/YY)</legend>
+        <fieldset className="grid">
+          <legend className="" aria-hidden="true">
+            Exp. date (MM/YY)
+          </legend>
 
+          <div className="grid grid-cols-2">
             <label className="sr-only" htmlFor="expiration-m">
               Expiration month, two digits
             </label>
@@ -31,13 +37,13 @@ export default function Form({ handleSubmit, handleChange }: FormProps) {
               Expiration year, two digits
             </label>
             <input type="text" id="expiration-y" onChange={handleChange} />
-          </fieldset>
-
-          <div>
-            <label htmlFor="cvc">CVC</label>
-            <input type="text" id="cvc" onChange={handleChange} />
           </div>
-        </div>
+        </fieldset>
+
+        <fieldset className="grid">
+          <label htmlFor="cvc">CVC</label>
+          <input type="text" id="cvc" onChange={handleChange} />
+        </fieldset>
         <button type="submit">Confirm</button>
       </form>
     </div>
