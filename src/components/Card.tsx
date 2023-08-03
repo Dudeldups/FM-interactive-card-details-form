@@ -10,7 +10,7 @@ export default function Card({ side }: CardProps) {
 
   let className: ClassName = {
     container: `absolute text-[0.5625rem] tracking-[0.08rem]`,
-    img: "w-[17.8125rem] h-[9.763rem]",
+    img: "w-[17.8125rem] h-[9.763rem] xl:w-[37.9375rem] xl:h-[15.3125rem]",
   };
 
   switch (side) {
@@ -39,7 +39,7 @@ export default function Card({ side }: CardProps) {
             src="images/card-logo.svg"
             alt=""
           />
-          <p className="mt-[2.3rem] text-[1.125rem] tracking-[0.1375rem]">
+          <p className="mt-[2.3rem] text-[1.125rem] tracking-[0.1375rem] xl:text-[1.75rem] xl:tracking-[0.21388rem]">
             0000 0000 0000 0000
           </p>
           <div className="flex justify-between mt-[1.06rem]">

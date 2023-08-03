@@ -11,7 +11,7 @@ export default function App() {
   };
 
   return (
-    <main className="font-space-grotesk font-medium min-h-screen bg-clr-bg-main">
+    <main className="font-space-grotesk font-medium min-h-screen bg-clr-bg-main xl:grid xl:grid-cols-[calc(50%)_50%]">
       <CardContainer />
       <Form handleSubmit={handleSubmit} handleChange={handleChange} />
     </main>
